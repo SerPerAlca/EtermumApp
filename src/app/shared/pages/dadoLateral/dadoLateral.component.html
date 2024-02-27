@@ -1,0 +1,55 @@
+
+
+<div class="container">
+  <div class="cube" (click)="lanzarDado()" #diceCube>
+      <div class="cube-face front">
+          <div class="inside">
+              <span class="dot"></span>
+          </div>
+      </div>
+      <div class="cube-face back">
+          <div class="inside">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+          </div>
+      </div>
+      <div class="cube-face left">
+          <div class="inside">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+          </div>
+      </div>
+      <div class="cube-face right">
+          <div class="inside">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+          </div>
+      </div>
+      <div class="cube-face top">
+          <div class="inside">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+          </div>
+      </div>
+      <div class="cube-face bottom">
+          <div class="inside">
+              <span class="dot"></span>
+              <span class="dot"></span>
+          </div>
+      </div>
+  </div>
+  <div *ngIf="animacionTerminada">
+    <p>Resultado: <strong> {{ resultado }} </strong></p>
+  </div>
+</div>
+

@@ -1,0 +1,43 @@
+<div *ngIf="resultadoDado">
+  <h1>Resultado del dado: </h1> {{ resultadoDado }}
+</div>
+
+<div class="grid central">
+
+  <div class="">
+    <img [src]="ficheroImagen" [alt]="ficheroImagen">
+  </div>
+
+  <div class="texto">
+    <ul>
+      <li *ngFor="let parrafo of texto">
+        {{ parrafo.texto }}
+      </li>
+      <br>
+    </ul>
+
+    <ul *ngIf="opcionesDialogo">
+      <li *ngFor="let opcion of texto">
+        <strong *ngIf="opcion.id">{{ opcion.id }}. </strong>
+        <span *ngIf="opcion.textoAccion"
+              [ngClass]="{
+                'opcional-true': opcion.opcional,
+                 'opcional-false': !opcion.opcional,
+                  'opciones-bloqueadas': opcionesBloqueadas}"
+              (click)="mostrarRespuesta(opcion.id, opcion)"
+              [style.pointerEvents]="(opcionSeleccionada !== null && opcion.id !== opcionSeleccionada) || opcionesBloqueadas ? 'none' : 'auto'">
+          {{ opcion.textoAccion }}
+        </span>
+      </li>
+    </ul>
+
+    <ul class="textoRespuesta" *ngIf="respuestaObtenida">
+      <li *ngFor="let parrafo of textoRespuesta">
+        {{ parrafo.textoRespuesta }}
+      </li>
+    </ul>
+
+  </div>
+
+  <button (click)="paginaSiguiente()"> Página Siguiente </button>
+</div>

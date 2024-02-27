@@ -1,0 +1,16 @@
+[
+  {
+    "texto" :"Capitán Rostford: No tenemos suficiente con las incursiones de los HACHAS DE HIELO en la costa occidental y los ataques de los PIELES VERDES en las montañas del este, que ahora además debo lidiar con caravanas de trasgos cruzando nuestro territorio al caer la noche."
+  },
+  {
+    "texto": "¿Tenéis alguna información de su propósito?"
+  },
+  {
+   "id": "1",
+   "textoAccion": "Describír todo lo que recordáis."
+ },
+ {
+   "id": "2",
+   "textoAccion": "No recordamos nada."
+ }
+]

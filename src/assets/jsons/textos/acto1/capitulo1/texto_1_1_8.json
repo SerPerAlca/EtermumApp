@@ -1,0 +1,19 @@
+[
+  {
+    "texto" :"Capitán Rostford: Sumo Inquisidor, no… no esperaba su llegada hasta mañana."
+  },
+  {
+    "texto": "Dice el capitán Rostford, visiblemente nervioso, al mismo tiempo que hinca una rodilla en el suelo."
+  },
+  {
+    "texto": " ¿Os arrodilláis? "
+  },
+  {
+    "id": "1",
+    "textoAccion": "Por supuesto"
+  },
+  {
+    "id": "2",
+    "textoAccion": "De ninguna manera"
+  }
+]

@@ -1,0 +1,41 @@
+<h1>Hero Layout</h1>
+<mat-sidenav-container fullscreen>
+
+  <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '300px' }">
+    <mat-toolbar>
+      <span>Lanzar dado</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <img src="assets/images/dado.png" alt="Menu">
+      </button>
+    </mat-toolbar>
+
+    <shared-dadoLateral></shared-dadoLateral>
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <img src="assets/images/dado.png" alt="Menu">
+      </div>
+    </button>
+
+    <span class="spacer"></span>
+    <button mat-button>
+      Eternum
+    </button>
+  </mat-toolbar>
+
+  <div class="container p-2">
+    <historia-libro-page></historia-libro-page>
+    <!-- <router-outlet></router-outlet> -->
+  </div>
+
+</mat-sidenav-container>
+
+
+
+
+
+<h5>Footer</h5>
+

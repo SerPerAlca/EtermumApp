@@ -1,0 +1,17 @@
+[
+  {
+    "texto" :"Anciana: Bien, bien por fin despertáis. Pensaba que no sobreviviríais. "
+  },
+  {
+    "texto" :"Anciana: Llegué a temer por vuestra supervivencia."
+  },
+  {
+    "id": "1",
+    "textoAccion": "¿Quién eres tú? (Opcional)",
+    "opcional": true
+  },
+  {
+    "id": "2",
+    "textoAccion": "¿Qué pasó exactamente? "
+  }
+]

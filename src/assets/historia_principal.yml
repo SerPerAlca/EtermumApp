@@ -1,0 +1,149 @@
+acto1:
+  capitulo1_1:
+    escena1_1_1:
+      texto: texto_1_1_1.json
+      audio: audio_1_1_1_.mp3
+      imagen: habitacion_de_curas.png
+      salida: escena1_1_2
+    escena1_1_2:
+      texto: texto_1_1_2.json
+      audio: audio_1_1_2.mp3
+      imagen: anciana_cielo_negro.png
+      opciones:
+        1:
+          texto: texto_1_1_2_1.json
+          audio: audio_1_1_2_1.mp3
+          imagen: anciana_cielo_negro.png
+        2:
+          texto: texto_1_1_2_2.json
+          audio: audio_1_1_2_2.mp3
+          imagen: anciana_cielo_negro.png
+          salida: escena1_1_3
+    escena1_1_3:
+      texto: texto_1_1_3.json
+      audio: audio_1_1_3.mp3
+      imagen: anciana_cielo_negro.png
+      salida: escena1_1_3_X
+    escena1_1_3_X:
+      itineracion: 1  ###################### I T I N E R A C I O N ###################################
+    escena1_1_4:
+      texto: texto_1_1_4.json
+      audio: audio_1_1_4.mp3
+      imagen: capitan_rostford.png
+      salida: escena1_1_5
+    escena1_1_5:
+      texto: texto_1_1_5.json
+      audio: audio_1_1_5.mp3
+      imagen: capitan_rostford.png
+      salida: escena1_1_6
+    escena1_1_6:
+      texto: texto_1_1_6.json
+      audio: audio_1_1_6.mp3
+      imagen: capitan_rostford.png
+      opciones:
+        1:
+          texto: texto_1_1_6_1.json
+          audio: audio_1_1_6_1.mp3
+          imagen: capitan_rostford.png
+          salida: escena1_1_7
+        2:
+          texto: texto_1_1_6_2.json
+          audio: audio_1_1_6_2.mp3
+          imagen: capitan_rostford.png
+          salida: escena1_1_7
+    escena1_1_7:
+      texto: texto_1_1_7.json
+      audio: audio_1_1_7.mp3
+      imagen: sir_gregor_desenfocado.png
+      salida: escena1_1_8
+    escena1_1_8:
+      texto: texto_1_1_8.json
+      audio: audio_1_1_8.mp3
+      imagen: capitan_rostford.png
+      opciones:
+        1:
+          texto: texto_1_1_8_1.json
+          imagen: capitan_rostford.png
+          salida: escena1_1_9
+        2:
+          texto: texto_1_1_8_2.json
+          imagen: capitan_rostford.png
+          salida: escena1_1_9
+    escena1_1_9:
+      texto: texto_1_1_9.json
+      audio: audio_1_1_9.mp3
+      imagen: sir_gregor.png
+      salida: escena1_1_10
+    escena1_1_10:
+      texto: texto_1_1_10.json
+      audio: audio_1_1_10.mp3
+      imagen: sir_gregor.png
+      salida: escena1_1_11
+    escena1_1_11:
+      texto: texto_1_1_11.json
+      audio: audio_1_1_11.mp3
+      imagen: capitan_rostford.png
+      salida: escena1_1_12
+    escena1_1_12:
+      texto: texto_1_1_12.json
+      audio: audio_1_1_12.mp3
+      imagen: sir_gregor.png
+      salida: escena1_1_13
+    escena1_1_13:
+      texto: texto_1_1_13.json
+      audio: audio_1_1_13.mp3
+      imagen: capitan_rostford.png
+      salida: escena1_1_14
+    escena1_1_14:
+      texto: texto_1_1_14.json
+      audio: audio_1_1_14.mp3
+      imagen: sir_gregor.png
+      salida: escena1_1_15
+    escena1_1_15:
+      texto: texto_1_1_15.json
+      audio: audio_1_1_15.mp3
+      imagen: capitan_rostford.png
+      salida: escena1_1_16
+    escena1_1_16:
+      texto: texto_1_1_16.json
+      audio: audio_1_1_16.mp3
+      imagen: sir_gregor.png
+      salida: escena1_1_17
+    escena1_1_17:
+      texto: texto_1_1_17.json
+      audio: audio_1_1_17.mp3
+      imagen: capitan_rostford.png
+      salida: escena1_1_18
+    escena1_1_18:
+      texto: texto_1_1_18.json
+      audio: audio_1_1_18.mp3
+      imagen: sir_gregor.png
+      salida: escena1_1_19
+    escena1_1_19:
+      texto: texto_1_1_19.json
+      audio: audio_1_1_19.mp3
+      imagen: capitan_rostford.png
+      salida: escena1_1_20
+    escena1_1_20:
+      texto: texto_1_1_20.json
+      audio: audio_1_1_20.mp3
+      imagen: sir_gregor.png
+      salida: escena1_1_21
+    escena1_1_21:
+      texto: texto_1_1_21.json
+      audio: audio_1_1_21.mp3
+      imagen: capitan_rostford.png
+      salida: escena1_1_22
+    escena1_1_22:
+      texto: texto_1_1_22.json
+      audio: audio_1_1_22.mp3
+      imagen: capitan_rostford.png
+      salida: escena1_1_23
+    escena1_1_23:
+      texto: texto_1_1_23.json
+      audio: audio_1_1_23.mp3
+      imagen: capitan_rostford.png
+      salida: escena1_1_23_X
+    escena1_1_23_x:
+      itineracion: 2 ###################### I T I N E R A C I O N ###################################
+####################################  F I N    C A P I T U L O   1.   ######################################################

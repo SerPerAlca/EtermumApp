@@ -1,0 +1,48 @@
+EternumApp v1.0.0
+
+Estado actual de la aplicación: 
+	- Capítulo 1 Finalizado. (sólo textos e imagenes)
+	- Itineración en Cielo Negro (sólo Casa Consistorial)
+	- Dado integrado en navbar lateral.
+	- Imagenes y jsons de textos del capitulo 1 integrados.
+	- ubicaciones.json creado. (sólo ubicación Cielo Negro).
+	- historia_principal.yml (sólo capítulo 1)
+
+
+
+Creados los Modulos:
+
+	1.HISTORIA (módulo para elementos de la historia principal y secundaria)
+		COMPONENTES:
+			- layout.component.
+			- libro-page.component.
+		SERVICES:
+			-historia.service
+		INTERFACES:
+			- TextoItem
+			- TextoRespuesta
+			- Escena
+			- EscenaConSalida
+			- EscenaConOpciones
+			- Episodio
+
+	2. MATERIAL (módulo para los elementos de la libreria de MATERIAL)				
+	
+	3. SHARED (módulo para lógica y elementos compartidos)
+		COMPONENTES:
+			- dadoLateral.component
+		SERVICES:
+			- comunicacion-dado.service
+			- shared-data-service
+
+	4. UBICACIONES (módulo para itineración en el juego)
+		COMPONENTES:
+			- ubicaciones-ciudad.component		
+		SERVICES:
+			-ubicaciones.service
+		INTERFACES:
+			- Tile
+			- Ubicacion
+			- Lugar
+
+
