@@ -1,16 +1,25 @@
-<div class="container">
-  <div class="map-container">
-    <img src="assets/images/itineracion/Sancto Regnum Norte Nodos.jpg" alt="Mapa">
-  </div>
 
-  <div class="controls-container">
-    <div class="arrow arrow-up" (click)="onClick('up')"><img src="assets/images/itineracion/arrow-up.png" alt=""></div>
-    <div class="arrow arrow-right" (click)="onClick('right')"><img src="assets/images/itineracion/arrow-right.png" alt=""></div>
-    <div class="arrow arrow-down" (click)="onClick('down')"><img src="assets/images/itineracion/arrow-down.png" alt=""></div>
-    <div class="arrow arrow-left" (click)="onClick('left')"><img src="assets/images/itineracion/arrow-left.png" alt=""></div>
-  </div>
-
-  <div class="text-container">
+<div >
+  <mat-grid-list [cols]="6" rowHeight="500px" gutterSize="4">
+    <mat-grid-tile class="flechas"
+    [colspan]="1"
+    [rowspan]="2">
+    <div class="control">
+      <div class="arrow arrow-up" (click)="onClick('up')"><img src="assets/images/itineracion/arrow-up.png" alt=""></div>
+      <div class="arrow arrow-right" (click)="onClick('right')"><img src="assets/images/itineracion/arrow-right.png" alt=""></div>
+      <div class="arrow arrow-down" (click)="onClick('down')"><img src="assets/images/itineracion/arrow-down.png" alt=""></div>
+      <div class="arrow arrow-left" (click)="onClick('left')"><img src="assets/images/itineracion/arrow-left.png" alt=""></div>
+    </div>
+  </mat-grid-tile>
+    <mat-grid-tile class="map-container"
+      [colspan]="4"
+      [rowspan]="2">
+      <img (click)="onImageClick($event)" src="assets/images/itineracion/Sancto Regnum Norte Nodos.jpg" alt="Mapa">
+    </mat-grid-tile>
+    <mat-grid-tile class="texto-auxiliar"
+    [colspan]="1"
+    [rowspan]="1">
     {{ ubicacionActual }}
-  </div>
+  </mat-grid-tile>
+  </mat-grid-list>
 </div>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { UbicacionLocal } from '../interfaces/itineracion-interface';
+import { Ciudad } from '../interfaces/itineracion-interface';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { map, switchMap, tap } from 'rxjs/operators';
@@ -11,8 +11,8 @@ import { of } from 'rxjs/internal/observable/of';
 export class UbicacionesService {
 
   public ciudadesJSONUrl = 'http://localhost:3000/ciudades'
-  private ubicacionesOriginal: UbicacionLocal[] | undefined;
-  private ubicacionesActual: UbicacionLocal[] | undefined;
+  private ubicacionesOriginal: Ciudad[] | undefined;
+  private ubicacionesActual: Ciudad[] | undefined;
 
   constructor(
     private http: HttpClient
@@ -40,8 +40,8 @@ export class UbicacionesService {
     }
   }
 
-  obtenerUbicacionCiudad(id: number): Observable<UbicacionLocal | undefined> {
-    return this.http.get<UbicacionLocal>(this.ciudadesJSONUrl)
+  obtenerUbicacionCiudad(id: number): Observable<Ciudad | undefined> {
+    return this.http.get<Ciudad>(this.ciudadesJSONUrl)
       .pipe(
         map(ciudad => {
           console.log('Ubicación del servidor:', ciudad);
@@ -61,7 +61,7 @@ export class UbicacionesService {
   actualizarHistoria(idUbicacion: number, idLugar: number): Observable<any> {
     const url = `${this.ciudadesJSONUrl}/${idUbicacion}`;
 
-    return this.http.get<UbicacionLocal>(url).pipe(
+    return this.http.get<Ciudad>(url).pipe(
       switchMap(ciudad => {
         const ubicacion = ciudad.id === idUbicacion ? ciudad : undefined;
         if (ubicacion) {

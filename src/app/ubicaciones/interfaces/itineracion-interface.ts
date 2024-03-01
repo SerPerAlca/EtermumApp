@@ -1,10 +1,10 @@
-export interface UbicacionLocal {
+export interface Ciudad {
   id: number;
   ubicacion: string;
-  lugares: LugarLocal[];
+  lugares: UbicacionLocal[];
 }
 
-export interface LugarLocal {
+export interface UbicacionLocal {
   id_lugar : number;
   lugar: string;
   label: string;
@@ -12,6 +12,12 @@ export interface LugarLocal {
   urlImagen : string;
   historia? : boolean;
   pathEscena? : string;
+}
+
+export interface Region {
+  id_region: number,
+  nombre : string,
+  ubicaciones : UbicacionRegional[];
 }
 
 export interface UbicacionRegional {
