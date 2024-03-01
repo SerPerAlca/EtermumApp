@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Tile } from '../../interfaces/tile-interface';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UbicacionesService } from '../../services/ubicaciones.service';
-import { Lugar, Ubicacion } from '../../interfaces/itineracion-interface';
+import { LugarLocal, UbicacionLocal } from '../../interfaces/itineracion-interface';
 import { switchMap } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { SharedDataService } from '../../../shared/services/shared-data.service';
@@ -14,7 +14,7 @@ import { SharedDataService } from '../../../shared/services/shared-data.service'
 })
 export class UbicacionesCiudadComponent implements OnInit {
   ubicacionId: number | undefined;
-  ubicacion: Ubicacion | undefined;
+  ubicacion: UbicacionLocal | undefined;
   tiles: Tile[] = [];
 
 
@@ -108,7 +108,7 @@ entrarLugarButton(tile: Tile): void {
 
 
   // Construimos las tiles para mostrar en la vista
-  private mapLugaresToTiles(lugares: Lugar[]): Tile[] {
+  private mapLugaresToTiles(lugares: LugarLocal[]): Tile[] {
     return lugares.map(lugar => ({
       id_lugar: lugar.id_lugar,
       text: lugar.label,

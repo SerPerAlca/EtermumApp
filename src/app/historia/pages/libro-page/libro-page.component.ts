@@ -60,7 +60,7 @@ export class LibroPageComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // Si venimos de otra vista (itineracion, combate, etc...)
+    // Recuperamos la escena siguiente si venimos de otra vista (itineracion, combate, etc)
     this.sharedDataSubscription$ = this.sharedDataService.getPathEscena$().pipe(
       takeUntil(this.destroy$)
     ).subscribe((pathEscena: string | null) => {
@@ -105,7 +105,7 @@ export class LibroPageComponent implements OnInit {
         tap(escena => {
           this.escenaActual = escena;
           if (this.escenaActual?.itineracion) {
-            this.router.navigate(['/ubicaciones-ciudad', this.escenaActual.itineracion]);
+            this.router.navigate(['/ciudad', this.escenaActual.itineracion]);
           }
           if (this.escenaActual?.texto !== undefined) this.ficheroTexto = this.escenaActual!.texto;
 
@@ -124,6 +124,7 @@ export class LibroPageComponent implements OnInit {
     this.textosSubscription$ = this.historiaService.obtenerTextos(nombreFichero).pipe(
       takeUntil(this.destroy$)
     ).subscribe(textos => {
+      debugger
       this.texto = textos
       console.log('Textos: ', this.texto);
     });

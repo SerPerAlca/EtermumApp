@@ -1,8 +1,8 @@
 [
   {
-    "texto" :"Sir Gregor: Deberíais perseguir a esos proscritos y llevarlos a la horca, capitán, en lugar de perder el tiempo con... sea quien sea que sean estos desgraciados..."
+    "texto" :"Sir Gregor: Deberíais perseguir a esos proscritos y llevarlos a la horca, capitán, en lugar de perder el tiempo con... distracciones inútiles."
   },
   {
-    "texto": "Sir Gregor, por primera vez, nota vuestra presencia."
+    "textoNarracion": "Sir Gregor, por primera vez, nota vuestra presencia."
   }
 ]

@@ -3,6 +3,7 @@ export interface TextoItem {
   id?: number;
   textoAccion?: string;
   opcional?: boolean;
+  textoNarracion: string;
 }
 
 

@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="map-container">
+    <img src="assets/images/itineracion/Sancto Regnum Norte Nodos.jpg" alt="Mapa">
+  </div>
+
+  <div class="controls-container">
+    <div class="arrow arrow-up" (click)="onClick('up')"><img src="assets/images/itineracion/arrow-up.png" alt=""></div>
+    <div class="arrow arrow-right" (click)="onClick('right')"><img src="assets/images/itineracion/arrow-right.png" alt=""></div>
+    <div class="arrow arrow-down" (click)="onClick('down')"><img src="assets/images/itineracion/arrow-down.png" alt=""></div>
+    <div class="arrow arrow-left" (click)="onClick('left')"><img src="assets/images/itineracion/arrow-left.png" alt=""></div>
+  </div>
+
+  <div class="text-container">
+    {{ ubicacionActual }}
+  </div>
+</div>

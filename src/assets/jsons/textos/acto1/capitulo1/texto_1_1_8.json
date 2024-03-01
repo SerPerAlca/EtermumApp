@@ -3,10 +3,10 @@
     "texto" :"Capitán Rostford: Sumo Inquisidor, no… no esperaba su llegada hasta mañana."
   },
   {
-    "texto": "Dice el capitán Rostford, visiblemente nervioso, al mismo tiempo que hinca una rodilla en el suelo."
+    "textoNarracion": "Dice el capitán Rostford, visiblemente nervioso, al mismo tiempo que hinca una rodilla en el suelo."
   },
   {
-    "texto": " ¿Os arrodilláis? "
+    "textoNarracion": " ¿Os arrodilláis? "
   },
   {
     "id": "1",

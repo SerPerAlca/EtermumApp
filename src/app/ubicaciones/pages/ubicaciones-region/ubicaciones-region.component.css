@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-container {
+  width: 60%;
+  margin: 3%;
+  overflow: hidden;
+  position: relative;
+}
+
+.map-container img {
+  width: 100%;
+  height: auto;
+}
+
+.controls-container {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow {
+  position: absolute;
+  /* font-size: 2em; */
+  cursor: pointer;
+}
+
+.arrow-up {
+  top: 100%;
+  transform: translate(280%, -100%);
+}
+
+.arrow-right {
+  bottom: 40%;
+  right: 45%;
+  transform: translate(200%, 100%);
+}
+
+.arrow-down {
+  bottom: 40%;
+  left: 45%;
+  transform: translate(270%, 130%);
+}
+
+.arrow-left {
+  top: 45%;
+  left: 45%;
+  transform: translate(0%, 0%);
+}
+
+.text-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 3%;
+}
+
+
+

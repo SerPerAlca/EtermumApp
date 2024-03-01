@@ -11,7 +11,9 @@
   <div class="texto">
     <ul>
       <li *ngFor="let parrafo of texto">
-        {{ parrafo.texto }}
+        <!-- El texto del narrador llevará un estilo diferente al texto de los diálogos-->
+        <span *ngIf="parrafo.texto">{{ parrafo.texto }}</span>
+        <span *ngIf="parrafo.textoNarracion"><strong>{{ parrafo.textoNarracion }}</strong></span>
       </li>
       <br>
     </ul>

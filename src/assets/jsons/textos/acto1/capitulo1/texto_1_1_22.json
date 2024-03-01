@@ -1,17 +1,17 @@
 [
   {
-    "texto" :"Acto seguido, el Sumo Inquisidor abandona la estancia con visible enojo."
+    "textoNarracion" :"Acto seguido, el Sumo Inquisidor abandona la estancia con visible enojo."
   },
   {
-    "texto": "El capitán, apoyando dificultosamente su mano izquierda en la mesa, se dirige a un cajón de donde extrae un trozo de tela vieja con hilos de hierba de montaña."
+    "textoNarracion": "El capitán, apoyando dificultosamente su mano izquierda en la mesa, se dirige a un cajón de donde extrae un trozo de tela vieja con hilos de hierba de montaña."
   },
   {
-    "texto" : "Saca una pipa de su bolsillo interior, la llena de hierba y la enciende."
+    "textoNarracion" : "Saca una pipa de su bolsillo interior, la llena de hierba y la enciende."
   },
   {
-    "texto": "Tras inhalar una calada interminable, exhala una densa nube de humo que impregna el aire."
+    "textoNarracion": "Tras inhalar una calada interminable, exhala una densa nube de humo que impregna el aire."
   },
   {
-    "texto" : "Finalmente, os mira y declara:"
+    "textoNarracion" : "Finalmente, os mira y declara:"
   }
 ]

@@ -4,12 +4,14 @@ import { MaterialModule } from '../material/material.module';
 import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { UbicacionesCiudadComponent } from './pages/ubicaciones-ciudad/ubicaciones-ciudad.component';
+import { UbicacionesRegionComponent } from './pages/ubicaciones-region/ubicaciones-region.component';
 
 
 
 @NgModule({
   declarations: [
-    UbicacionesCiudadComponent
+    UbicacionesCiudadComponent,
+    UbicacionesRegionComponent
   ],
   imports: [
     CommonModule,
