@@ -1,5 +1,6 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ComunicacionDadoService } from '../../services/comunicacion-dado.service';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'shared-dadoLateral',
@@ -8,21 +9,17 @@ import { ComunicacionDadoService } from '../../services/comunicacion-dado.servic
 })
 export class DadoLateralComponent implements OnInit {
 
-  private cubeElement?: HTMLElement;
+  public cubeElement?: HTMLElement;
   public resultado : number;
   public animacionTerminada = false;
   @ViewChild('diceCube') diceCube: ElementRef;
+  @ViewChild(MatSidenav) sidenav: MatSidenav;
 
   constructor(
               private element: ElementRef,
-              private comunicacionDadoServ : ComunicacionDadoService
-              ) {}
-
-  ngAfterViewInit() {
-    // this.cubeElement = this.element.nativeElement.querySelector('.cube');
-    this.cubeElement = this.diceCube.nativeElement;
-    this.cubeElement.addEventListener('transitionend', this.handleTransitionEnd.bind(this));
-  }
+              private comunicacionDadoServ : ComunicacionDadoService,
+              private cdr: ChangeDetectorRef
+              ) {  }
 
   ngOnDestroy(){
     if (this.cubeElement) {
@@ -39,7 +36,23 @@ export class DadoLateralComponent implements OnInit {
     }
   }
 
-  ngOnInit() {  }
+  ngOnInit() {
+    this.cubeElement = this.element.nativeElement.querySelector('.cube');
+    this.cubeElement.addEventListener('transitionend', this.handleTransitionEnd.bind(this));
+
+  }
+
+
+  // abrirPanelLateral() {
+  //   if (this.sidenav && this.cubeElement) {
+  //     console.log('Abriendo panel lateral');
+  //     this.sidenav.toggle();
+  //   } else {
+  //     console.log('sidenav', this.sidenav);
+  //     console.log('cubiElement',  this.cubeElement);
+  //     console.log('No se puede abrir el panel lateral. sidenav o cubeElement es nulo.');
+  //   }
+  // }
 
   lanzarDado(){
     if(this.cubeElement && this.cubeElement != undefined){

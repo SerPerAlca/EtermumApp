@@ -24,6 +24,8 @@ export interface UbicacionRegional {
   id : number,
   nombre : string,
   entrada : boolean,
+  descansar? : boolean;
+  codigo_ciudad?: number,
   id_up : number | null,
   distance_up : number | null,
   id_right : number | null,

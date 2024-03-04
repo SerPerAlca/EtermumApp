@@ -15,6 +15,7 @@ import { SharedDataService } from '../../../shared/services/shared-data.service'
 export class UbicacionesCiudadComponent implements OnInit {
   ubicacionId: number | undefined;
   ubicacion: Ciudad | undefined;
+  public nombreCiudad : string = null;
   tiles: Tile[] = [];
 
 
@@ -38,15 +39,19 @@ export class UbicacionesCiudadComponent implements OnInit {
     ).subscribe(
       ubicaciones => {
         if (ubicaciones && ubicaciones.length > 0) {
+
           console.log('this.ubicacionId', this.ubicacionId);
           // Si la respuesta es un objeto, envuélvelo en un array
           const ubicacionesArray = Array.isArray(ubicaciones) ? ubicaciones : [ubicaciones];
           const ubicacion = ubicacionesArray.find(u => u.id == this.ubicacionId);
+          this.nombreCiudad = ubicacion.ubicacion;
           // console.log('Tipo de this.ubicacionId:', typeof this.ubicacionId);
           // console.log('Tipo de ubicacionesArray[0].id:', typeof ubicacionesArray[0].id);
           if (ubicacion) {
+
             this.ubicacion = ubicacion;
             this.tiles = this.mapLugaresToTiles(ubicacion.lugares);
+
           } else {
             // Si no se encuentra la ubicación, redirige a la ruta anterior
             this.router.navigate(['../']);

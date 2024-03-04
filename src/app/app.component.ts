@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     // Iniciar sesión al inicio de la aplicación
-    this.ubicacionesServ.iniciarSesion().subscribe();
+    // this.ubicacionesServ.iniciarSesion().subscribe();
   }
 
    // Llama a cerrarSesion antes de cerrar la aplicación

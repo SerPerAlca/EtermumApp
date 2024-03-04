@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Ciudad } from '../interfaces/itineracion-interface';
+import { Ciudad, Region, UbicacionRegional } from '../interfaces/itineracion-interface';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { map, switchMap, tap } from 'rxjs/operators';
@@ -11,12 +11,65 @@ import { of } from 'rxjs/internal/observable/of';
 export class UbicacionesService {
 
   public ciudadesJSONUrl = 'http://localhost:3000/ciudades'
+  public regionJSONpath = 'assets/jsons/itineracion/itineracion.json';
   private ubicacionesOriginal: Ciudad[] | undefined;
   private ubicacionesActual: Ciudad[] | undefined;
+  private idRegionActual: number = 1;
+
 
   constructor(
     private http: HttpClient
   ) { }
+
+  getRegionActual(): number {
+    return this.idRegionActual;
+  }
+
+  private getUbicacionById(idUbicacionRegional: number, region : Region): UbicacionRegional | null {
+    return region.ubicaciones.find(item => item.id === idUbicacionRegional);
+  }
+
+  obtenerDatosDestino(idRegion: number, idUbicacion: number, direccion: string): Observable<any> {
+    return this.http.get<any[]>(this.regionJSONpath)
+      .pipe(
+        map(data => this.procesarJson(idRegion, idUbicacion, direccion, data))
+      );
+  }
+
+  private procesarJson(idRegion: number, idUbicacion: number, direccion: string, data: any[]): any {
+    const region = data.find(item => item.id_region === idRegion);
+
+    if (region) {
+      const ubicacionActual: UbicacionRegional = region.ubicaciones.find(item => item.id === idUbicacion);
+
+      if (ubicacionActual) {
+        const idDireccion = 'id_' + direccion;
+        const distanceDireccion = 'distance_' + direccion;
+
+        if (ubicacionActual[idDireccion] !== null) {
+          const id = ubicacionActual[idDireccion];
+          const distancia = ubicacionActual[distanceDireccion];
+          const ubicacionDestino = this.getUbicacionById(id, region );
+          const nombre = ubicacionDestino.nombre;
+          const codCiudad = ubicacionDestino.codigo_ciudad !== undefined ? ubicacionDestino.codigo_ciudad : null;
+          const descansar = ubicacionDestino.descansar !== undefined ? ubicacionDestino.descansar : null;
+
+          return {
+            id: id,
+            distancia: distancia,
+            nombre: nombre,
+            codCiudad: codCiudad,
+            descansar : descansar,
+          };
+
+        }
+      }
+    }
+
+    return null;
+
+  }
+
 
   // Obtener los datos originales y hacer una copia del json de ubicaciones
   iniciarSesion(): Observable<any[]> {

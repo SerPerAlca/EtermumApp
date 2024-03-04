@@ -65,6 +65,19 @@
   margin-right: 3rem;
 }
 
+h1 {
+  color: rgba(226, 35, 10, 0.678);
+  font-size: 5rem;
+}
+
+.titulo_ciudad{
+  justify-content: center;
+  margin-left: 10rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 50%;
+}
+
 @media (max-width: 768px) {
   .grid-list {
     width: 100%;

@@ -34,5 +34,25 @@
         "urlImagen" : "assets/images/itineracion/tienda_items.png"
       }
     ]
+  },
+  {
+    "id" : 2,
+    "ubicacion" : "Green Town",
+    "lugares" : [
+      {
+        "id_lugar" : 1,
+        "lugar" : "calle_principal",
+        "label" : "Calle Principal",
+        "tooltip" : "Todo está lleno de cadáveres y sangre",
+        "urlImagen" : "assets/images/itineracion/calle_principal_green_town.png"
+      },
+      {
+        "id_lugar" : 2,
+        "lugar" : "Salida",
+        "label" : "Volver al camino",
+        "tooltip" : "Salir de Green Town",
+        "urlImagen" : "assets/images/itineracion/camino_nevado_huellas.png"
+      }
+    ]
   }
 ]

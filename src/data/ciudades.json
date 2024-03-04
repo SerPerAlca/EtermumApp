@@ -17,7 +17,7 @@
           "label": "Casa Consistorial",
           "tooltip": "Aquí se manejan los asuntos de Cielo Negro",
           "urlImagen": "assets/images/itineracion/casa_consistorial.png",
-          "historia": false,
+          "historia": true,
           "pathEscena": "acto1.capitulo1_1.escena1_1_4"
         },
         {
@@ -33,6 +33,29 @@
           "label": "Tienda de Items",
           "tooltip": "Objetos explosivos y venenos",
           "urlImagen": "assets/images/itineracion/tienda_items.png"
+        }
+      ]
+    },
+    {
+      "id" : 2,
+      "ubicacion" : "Green Town",
+      "lugares" : [
+        {
+          "id_lugar" : 1,
+          "lugar" : "calle_principal",
+          "label" : "Calle Principal",
+          "tooltip" : "Todo está lleno de cadáveres y sangre",
+          "historia": true,
+          "urlImagen" : "assets/images/itineracion/calle_principal_green_town.png",
+          "pathEscena": "acto1.capitulo1_1.escena1_1_4"
+        },
+        {
+          "id_lugar" : 2,
+          "lugar" : "Salida",
+          "label" : "Volver al camino",
+          "tooltip" : "Salir de Green Town",
+          "historia": true,
+          "urlImagen" : "assets/images/itineracion/camino_nevado_huellas.png"
         }
       ]
     }

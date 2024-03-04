@@ -124,7 +124,6 @@ export class LibroPageComponent implements OnInit {
     this.textosSubscription$ = this.historiaService.obtenerTextos(nombreFichero).pipe(
       takeUntil(this.destroy$)
     ).subscribe(textos => {
-      debugger
       this.texto = textos
       console.log('Textos: ', this.texto);
     });

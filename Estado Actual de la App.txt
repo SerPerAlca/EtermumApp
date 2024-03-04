@@ -1,6 +1,6 @@
-EternumApp v1.0.0
+EternumApp v2.0.0
 
-Estado actual de la aplicación: 
+EternumApp v1.0.0 -> Estado actual de la aplicación: 
 	- Capítulo 1 Finalizado. (sólo textos e imagenes)
 	- Itineración en Cielo Negro (sólo Casa Consistorial)
 	- Dado integrado en navbar lateral.
@@ -8,22 +8,33 @@ Estado actual de la aplicación:
 	- ubicaciones.json creado. (sólo ubicación Cielo Negro).
 	- historia_principal.yml (sólo capítulo 1)
 
+EternumApp v2.0.0 -> Estado actual de la aplicación: 
+	- Creado sistema de viaje en Región. 
+	- Itineración en Green Town (sólo calle principal)
 
+Elementos incompletos o faltantes:
+	- Introducir Audios.
+	- Introducir armas, armaduras e items. 
+	- Desarrollo de tiendas.
+	- Itineración completa Cielo Negro.
+	- Itineración completa Green Town.
+	- Animación de Descanso. 
+	
 
 Creados los Modulos:
 
 	1.HISTORIA (módulo para elementos de la historia principal y secundaria)
 		COMPONENTES:
-			- layout.component.
-			- libro-page.component.
+			- layout.component.    
+			- libro-page.component.  
 		SERVICES:
-			-historia.service
+			-historia.service   
 		INTERFACES:
-			- TextoItem
-			- TextoRespuesta
-			- Escena
-			- EscenaConSalida
-			- EscenaConOpciones
+			- TextoItem  
+			- TextoRespuesta   
+			- Escena  
+			- EscenaConSalida  
+			- EscenaConOpciones  
 			- Episodio
 
 	2. MATERIAL (módulo para los elementos de la libreria de MATERIAL)				
@@ -37,12 +48,17 @@ Creados los Modulos:
 
 	4. UBICACIONES (módulo para itineración en el juego)
 		COMPONENTES:
-			- ubicaciones-ciudad.component		
+			- ubicaciones-ciudad.component	
+			- ubicaciones-region.component
+			- dialog-descansar-regional.component
+			- dialog-entrar-regional.component	
 		SERVICES:
 			-ubicaciones.service
 		INTERFACES:
 			- Tile
-			- Ubicacion
-			- Lugar
+			- Ciudad
+			- UbicacionLocal
+			- Region
+			- UbicacionRegional
 
 

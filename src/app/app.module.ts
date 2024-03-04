@@ -9,6 +9,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { SharedModule } from './shared/shared.module';
 import { UbicacionesModule } from './ubicaciones/ubicaciones.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,7 @@ import { UbicacionesModule } from './ubicaciones/ubicaciones.module';
     HistoriaModule,
     HttpClientModule,
     SharedModule,
-    UbicacionesModule,
+    UbicacionesModule
   ],
   providers: [
     provideAnimationsAsync()
